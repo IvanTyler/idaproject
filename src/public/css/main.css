@@ -5,13 +5,13 @@
   padding: 0;
   margin: 0;
 }
-.form-input,
-.withdrawal {
+.form-input-BS-BR,
+.withdrawal-BS-BR {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
-.product-item,
-.form-add-product {
+.product-item-BS-BR,
+.add-product-BS-BR {
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
   border-radius: 4px;
 }
@@ -31,14 +31,17 @@
   display: flex;
 }
 .form-adding-products-title {
-  font-family: 'SourceSans';
+  font-family: 'SourceSansPro-regular';
   font-size: 28px;
   line-height: 35px;
+  color: #3f3f3f;
 }
 .form-adding-products {
+  position: sticky;
+  top: 24px;
   margin-top: 16px;
   padding: 24px;
-  background: #fffefb;
+  background-color: #fffefb;
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
   border-radius: 4px;
 }
@@ -46,14 +49,30 @@
   margin-top: 16px;
 }
 .form-adding-products .adding-products-item .label-adding-products {
-  font-family: 'SourceSans';
-  font-size: 10px;
+  position: relative;
+  font-family: 'SourceSansPro-regular';
+  font-size: 12px;
   line-height: 13px;
   letter-spacing: -0.02em;
   color: #49485e;
 }
+.form-adding-products .adding-products-item .label-adding-products::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #ff8484;
+}
+.form-adding-products .adding-products-item .label-adding-products.product-description::after {
+  display: none;
+}
 .form-adding-products .adding-products-input,
 .form-adding-products .adding-products-textarea {
+  font-family: 'SourceSansPro-regular';
   min-width: 100%;
   height: 36px;
   margin-top: 4px;
@@ -63,15 +82,46 @@
   font-size: 12px;
   line-height: 15px;
   background-color: transparent;
-  color: #b4b4b4;
+  color: #3f3f3f;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+}
+.form-adding-products .error-message {
+  display: inline-block;
+  margin-top: 7px;
+  font-family: 'SourceSansPro-regular';
+  font-size: 11px;
+  line-height: 10px;
+  letter-spacing: -0.02em;
+  color: #ff8484;
+  opacity: 0;
+}
+.form-adding-products input[type="number"]::-webkit-outer-spin-button,
+.form-adding-products input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-adding-products input[type="number"] {
+  -moz-appearance: textfield;
+}
+.form-adding-products input[type="number"]:hover,
+.form-adding-products input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+.form-adding-products input[type=number]::-webkit-inner-spin-button,
+.form-adding-products input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-adding-products .adding-products-input.error {
+  border: 1px solid #ff8484;
 }
 .form-adding-products .adding-products-input::placeholder,
 .form-adding-products .adding-products-textarea::placeholder {
   color: #b4b4b4;
 }
 .form-adding-products .adding-products-textarea {
+  resize: none;
   padding-top: 11px;
   min-height: 108px;
   max-height: 108px;
@@ -85,7 +135,7 @@
   height: 36px;
   width: 100%;
   margin-top: 24px;
-  font-family: 'Inter';
+  font-family: 'inter-medium';
   background-color: #eeeeee;
   font-size: 12px;
   font-weight: bold;
@@ -95,6 +145,12 @@
   outline: none;
   border-radius: 10px;
   cursor: pointer;
+  transition: 0.2s;
+}
+.form-adding-products .button-add-product.active {
+  background-color: #7bae73;
+  color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 .section-adding-products-right {
   margin-left: 16px;
@@ -104,7 +160,7 @@
   align-items: center;
   justify-content: center;
   margin-left: auto;
-  font-family: 'SourceSans';
+  font-family: 'SourceSansPro-regular';
   width: 121.49px;
   height: 36px;
   background-color: #fffefb;
@@ -114,6 +170,18 @@
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
+.section-adding-products-right .product-withdrawal::after {
+  content: '';
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: -3px;
+  width: 4.59px;
+  height: 4.59px;
+  border: 1px solid #b4b4b4;
+  transform: rotate(45deg);
+  border-left: transparent;
+  border-top: transparent;
+}
 .section-adding-products-right .wrapper-about-products {
   display: flex;
   flex-wrap: wrap;
@@ -121,15 +189,53 @@
   margin: 8px -8px -8px -8px;
 }
 .section-adding-products-right .wrapper-about-products .about-product-item {
+  position: relative;
   margin: 8px;
   max-width: 332px;
+  cursor: pointer;
+}
+.section-adding-products-right .wrapper-about-products .about-product-item .delete-product {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  border: none;
+  outline: none;
+  width: 32px;
+  height: 32px;
+  background: #ff8484;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  opacity: 0;
+}
+.section-adding-products-right .wrapper-about-products .about-product-item .delete-product::after {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url('../icon/delete-product.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section-adding-products-right .wrapper-about-products .about-product-item:hover > .delete-product {
+  opacity: 1;
+  z-index: 1;
+  top: -8px;
+  right: -8px;
 }
 .section-adding-products-right .wrapper-about-products .about-product-description {
   padding: 19px 16px 24px;
-  background: #FFFEFB;
+  background-color: #fffefb;
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
-  font-family: 'SourceSans';
-  color: #3F3F3F;
+  border-radius: 4px;
+  color: #3f3f3f;
+}
+.section-adding-products-right .wrapper-about-products .about-product-description .about-product-title,
+.section-adding-products-right .wrapper-about-products .about-product-description .about-product-text,
+.section-adding-products-right .wrapper-about-products .about-product-description .about-product-price {
+  font-family: 'SourceSansPro-regular';
 }
 .section-adding-products-right .wrapper-about-products .about-product-description .about-product-title {
   font-weight: 600;

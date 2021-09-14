@@ -1,13 +1,13 @@
 @font-face {
-	font-family: 'Inter';
-	src: url('../fonts/inter/inter.woff2') format('woff2'),
-		url('../fonts/inter/inter.woff') format('woff');
+	font-family: 'inter-medium';
+	src: url('../fonts/inter/inter-medium.woff2') format('woff2'),
+		url('../fonts/inter/inter-medium.woff') format('woff');
 	font-weight: 600;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'SourceSans';
-	src: url('../fonts/source-sans/source-sans.woff2') format('woff2'),
-		url('../fonts/source-sans/source-sans.woff') format('woff');
+	font-family: 'SourceSansPro-regular';
+	src: url('../fonts/SourceSansPro/SourceSansPro-regular.woff2') format('woff2'),
+		url('../fonts/SourceSansPro/SourceSansPro-regular.woff') format('woff');
 }
