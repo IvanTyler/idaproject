@@ -5,7 +5,6 @@ const $nameProduct = document.querySelector('#nameProduct')
 const $linkProduct = document.querySelector('#linkProduct')
 const $priceProduct = document.querySelector('#priceProduct')
 
-
 function checkEmptyForm() {
     const lengthStringNameProduct = $nameProduct.value.trim().length
     const lengthStringlinkProduct = $linkProduct.value.trim().length
