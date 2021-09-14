@@ -36,6 +36,7 @@ if ($newProductForm) {
 
         if (($nameProduct.value) && ($linkProduct.value) && ($priceProduct.value)) {
             $nameProduct.classList.remove('error')
+            $newProductForm.reset();
             console.log(formData)
         }
     })

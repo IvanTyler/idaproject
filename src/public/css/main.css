@@ -82,7 +82,8 @@
   }
 }
 .form-adding-products .adding-products-item {
-  margin-top: 16px;
+  position: relative;
+  margin-top: 20px;
 }
 .form-adding-products .adding-products-item .label-adding-products {
   position: relative;
@@ -148,6 +149,9 @@
   }
 }
 .form-adding-products .error-message {
+  position: absolute;
+  left: 0;
+  bottom: -16px;
   display: inline-block;
   margin-top: 7px;
   font-family: 'SourceSansPro-regular';
