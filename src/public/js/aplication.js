@@ -33,7 +33,6 @@ $newProductForm?.addEventListener('submit', (event) => {
     if (!$priceProduct.value) {
         $priceProduct.classList.add('error')
         document.querySelector('.error-message.priceProduct').style.opacity = '1'
-
     }
 
     if (($nameProduct.value) && ($linkProduct.value) && ($priceProduct.value)) {
