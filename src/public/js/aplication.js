@@ -37,6 +37,7 @@ $newProductForm?.addEventListener('submit', (event) => {
     }
 
     if (($nameProduct.value) && ($linkProduct.value) && ($priceProduct.value)) {
+        document.querySelector('.button-add-product').classList.remove('active')
         $nameProduct.classList.remove('error')
         $newProductForm.reset();
         console.log(formData)
