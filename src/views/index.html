@@ -14,44 +14,47 @@
     <main class="main">
         <section class="section-adding-products">
             <div class="container adding-products-container">
-                <section class="section-adding-products-left">
-                    <h3 class="form-adding-products-title">Добавление товара</h3>
+                <section class="section-adding-products__left">
+                    <h3 class="section-adding-products__title">Добавление товара</h3>
                     <form name="newProductForm" action="" class="form-adding-products">
-                        <div class="adding-products-item">
-                            <label for="nameProduct" class="label-adding-products">Наименование товара</label>
-                            <input placeholder="Введите наименование товара" type="text" name="nameProduct" id="nameProduct"
-                                class="adding-products-input necessarily">
+                        <div class="form-adding-products__item">
+                            <label for="nameProduct" class="form-adding-products__label">Наименование товара</label>
+                            <input placeholder="Введите наименование товара" type="text" name="nameProduct"
+                                id="nameProduct" class="form-adding-products__input necessarily">
                             <span class="error-message nameProduct">Поле является обязательным</span>
                         </div>
-                        <div class="adding-products-item">
-                            <label for="product-description" class="label-adding-products product-description">Описание товара</label>
-                            <textarea placeholder="Введите описание товара" type="text" name="product-description" id="product-description"
-                                class="adding-products-textarea"></textarea>
+                        <div class="form-adding-products__item">
+                            <label for="product-description" class="form-adding-products__label product-description">Описание
+                                товара</label>
+                            <input placeholder="Введите описание товара" type="text" name="product-description"
+                                id="product-description" class="form-adding-products__input product-description">
                         </div>
-                        <div class="adding-products-item">
-                            <label for="linkProduct" class="label-adding-products">Ссылка на изображение товара</label>
-                            <input placeholder="Введите ссылку" type="text" name="linkProduct" id="linkProduct" class="adding-products-input necessarily">
+                        <div class="form-adding-products__item">
+                            <label for="linkProduct" class="form-adding-products__label">Ссылка на изображение товара</label>
+                            <input placeholder="Введите ссылку" type="text" name="linkProduct" id="linkProduct"
+                                class="form-adding-products__input necessarily">
                             <span class="error-message linkProduct">Поле является обязательным</span>
                         </div>
-                        <div class="adding-products-item">
-                            <label for="priceProduct" class="label-adding-products">Цена товара</label>
-                            <input placeholder="Введите цену" type="number" name="priceProduct" id="priceProduct" class="adding-products-input necessarily">
+                        <div class="form-adding-products__item">
+                            <label for="priceProduct" class="form-adding-products__label">Цена товара</label>
+                            <input placeholder="Введите цену" type="number" name="priceProduct" id="priceProduct"
+                                class="form-adding-products__input necessarily">
                             <span class="error-message priceProduct">Поле является обязательным</span>
                         </div>
-                        
-                        <button class="button-add-product">Добавить товар</button>
+
+                        <button class="form-adding-products__add-product">Добавить товар</button>
                     </form>
                 </section>
 
-                <section class="section-adding-products-right">
-                    <div class="product-withdrawal">По умолчанию</div>
-                    <div class="wrapper-about-products">
-                        <div class="about-product-item">
+                <section class="section-adding-products__right">
+                    <div class="product-withdrawal-default">По умолчанию</div>
+                    <ul class="about-products-list">
+                        <li class="about-products-list__item">
                             <button class="delete-product"></button>
-                            <div class="wrapper-about-product-img">
-                                <img src="/src/public/img/img-product.png" alt="" class="about-product-img">
+                            <div class="wrapper-product-img">
+                                <img src="/src/public/img/img-product.png" alt="Удалить товар" class="wrapper-product-img__img">
                             </div>
-                            <div class="about-product-description">
+                            <div class="about-products-list__description">
                                 <h3 class="about-product-title">Наименование товара</h3>
                                 <div class="about-product-text">
                                     Довольно-таки интересное описание товара в несколько строк.
@@ -59,13 +62,13 @@
                                 </div>
                                 <div class="about-product-price">10 000 руб.</div>
                             </div>
-                        </div>
-                        <div class="about-product-item">
+                        </li>
+                        <li class="about-products-list__item">
                             <button class="delete-product"></button>
-                            <div class="wrapper-about-product-img">
-                                <img src="/src/public/img/img-product.png" alt="" class="about-product-img">
+                            <div class="wrapper-product-img">
+                                <img src="/src/public/img/img-product.png" alt="Удалить товар" class="wrapper-product-img__img">
                             </div>
-                            <div class="about-product-description">
+                            <div class="about-products-list__description">
                                 <h3 class="about-product-title">Наименование товара</h3>
                                 <div class="about-product-text">
                                     Довольно-таки интересное описание товара в несколько строк.
@@ -73,13 +76,13 @@
                                 </div>
                                 <div class="about-product-price">10 000 руб.</div>
                             </div>
-                        </div>
-                        <div class="about-product-item">
+                        </li>
+                        <li class="about-products-list__item">
                             <button class="delete-product"></button>
-                            <div class="wrapper-about-product-img">
-                                <img src="/src/public/img/img-product.png" alt="" class="about-product-img">
+                            <div class="wrapper-product-img">
+                                <img src="/src/public/img/img-product.png" alt="Удалить товар" class="wrapper-product-img__img">
                             </div>
-                            <div class="about-product-description">
+                            <div class="about-products-list__description">
                                 <h3 class="about-product-title">Наименование товара</h3>
                                 <div class="about-product-text">
                                     Довольно-таки интересное описание товара в несколько строк.
@@ -87,13 +90,13 @@
                                 </div>
                                 <div class="about-product-price">10 000 руб.</div>
                             </div>
-                        </div>
-                        <div class="about-product-item">
+                        </li>
+                        <li class="about-products-list__item">
                             <button class="delete-product"></button>
-                            <div class="wrapper-about-product-img">
-                                <img src="/src/public/img/img-product.png" alt="" class="about-product-img">
+                            <div class="wrapper-product-img">
+                                <img src="/src/public/img/img-product.png" alt="Удалить товар" class="wrapper-product-img__img">
                             </div>
-                            <div class="about-product-description">
+                            <div class="about-products-list__description">
                                 <h3 class="about-product-title">Наименование товара</h3>
                                 <div class="about-product-text">
                                     Довольно-таки интересное описание товара в несколько строк.
@@ -101,79 +104,10 @@
                                 </div>
                                 <div class="about-product-price">10 000 руб.</div>
                             </div>
-                        </div>
-                        <div class="about-product-item">
-                            <button class="delete-product"></button>
-                            <div class="wrapper-about-product-img">
-                                <img src="/src/public/img/img-product.png" alt="" class="about-product-img">
-                            </div>
-                            <div class="about-product-description">
-                                <h3 class="about-product-title">Наименование товара</h3>
-                                <div class="about-product-text">
-                                    Довольно-таки интересное описание товара в несколько строк.
-                                    Довольно-таки интересное описание товара в несколько строк
-                                </div>
-                                <div class="about-product-price">10 000 руб.</div>
-                            </div>
-                        </div>
-                        <div class="about-product-item">
-                            <button class="delete-product"></button>
-                            <div class="wrapper-about-product-img">
-                                <img src="/src/public/img/img-product.png" alt="" class="about-product-img">
-                            </div>
-                            <div class="about-product-description">
-                                <h3 class="about-product-title">Наименование товара</h3>
-                                <div class="about-product-text">
-                                    Довольно-таки интересное описание товара в несколько строк.
-                                    Довольно-таки интересное описание товара в несколько строк
-                                </div>
-                                <div class="about-product-price">10 000 руб.</div>
-                            </div>
-                        </div>
-                        <div class="about-product-item">
-                            <button class="delete-product"></button>
-                            <div class="wrapper-about-product-img">
-                                <img src="/src/public/img/img-product.png" alt="" class="about-product-img">
-                            </div>
-                            <div class="about-product-description">
-                                <h3 class="about-product-title">Наименование товара</h3>
-                                <div class="about-product-text">
-                                    Довольно-таки интересное описание товара в несколько строк.
-                                    Довольно-таки интересное описание товара в несколько строк
-                                </div>
-                                <div class="about-product-price">10 000 руб.</div>
-                            </div>
-                        </div>
-                        <div class="about-product-item">
-                            <button class="delete-product"></button>
-                            <div class="wrapper-about-product-img">
-                                <img src="/src/public/img/img-product.png" alt="" class="about-product-img">
-                            </div>
-                            <div class="about-product-description">
-                                <h3 class="about-product-title">Наименование товара</h3>
-                                <div class="about-product-text">
-                                    Довольно-таки интересное описание товара в несколько строк.
-                                    Довольно-таки интересное описание товара в несколько строк
-                                </div>
-                                <div class="about-product-price">10 000 руб.</div>
-                            </div>
-                        </div>
-                        <div class="about-product-item">
-                            <button class="delete-product"></button>
-                            <div class="wrapper-about-product-img">
-                                <img src="/src/public/img/img-product.png" alt="" class="about-product-img">
-                            </div>
-                            <div class="about-product-description">
-                                <h3 class="about-product-title">Наименование товара</h3>
-                                <div class="about-product-text">
-                                    Довольно-таки интересное описание товара в несколько строк.
-                                    Довольно-таки интересное описание товара в несколько строк
-                                </div>
-                                <div class="about-product-price">10 000 руб.</div>
-                            </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </section>
+
             </div>
         </section>
     </main>

@@ -11,13 +11,12 @@ $newProductForm?.addEventListener('input', (event) => {
         const lengthStringlinkProduct = $linkProduct.value.trim().length
         const lengthStringpriceProduct = $priceProduct.value.trim().length
         if ((lengthStringNameProduct >= 1) && (lengthStringlinkProduct >= 1) && (lengthStringpriceProduct >= 1)) {
-            document.querySelector('.button-add-product').classList.add('active')
+            document.querySelector('.form-adding-products__add-product').classList.add('active')
         } else {
-            document.querySelector('.button-add-product').classList.remove('active')
+            document.querySelector('.form-adding-products__add-product').classList.remove('active')
         }
     }
 })
-
 
 $newProductForm?.addEventListener('submit', (event) => {
     event.preventDefault()
@@ -36,7 +35,7 @@ $newProductForm?.addEventListener('submit', (event) => {
     }
 
     if (($nameProduct.value) && ($linkProduct.value) && ($priceProduct.value)) {
-        document.querySelector('.button-add-product').classList.remove('active')
+        document.querySelector('.form-adding-products__add-product').classList.remove('active')
         $nameProduct.classList.remove('error')
         $newProductForm.reset();
         console.log(formData)
