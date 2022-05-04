@@ -10,7 +10,12 @@
 @import url('./variables/main-variables.less');
 @import url('./mixins/main-mixins.less');
 
+html, body {
+    height: calc(100% - 30px);
+}
+
 .main {
+    height: calc(100% - 30px);
     margin-top: 30px;
 }
  
@@ -26,9 +31,10 @@
 }
 
 .section-adding-products {
-
+    height: calc(100% - 30px);
     .adding-products-container {
         display: flex;
+        height: calc(100% - 30px);
         @media (max-width: 810px) {
             flex-direction: column;
         }
@@ -197,6 +203,7 @@
 
     &__right {
         width: 100%;
+        height: 100%;
         margin-left: 16px;
         @media (max-width: 810px) {
             margin-left: 0;
@@ -252,6 +259,7 @@
             }
             .wrapper-product-img {
                 width: 100%;
+                height: 200px;
                 &__img {
                     width: 100%;
                     height: 100%;
@@ -326,6 +334,12 @@
                     }
                 }
             }
+        }
+        .about-products-list.preloader {
+            height: 100%;
+            background-image: url('../img/preloader.gif');
+            background-repeat: no-repeat;
+            background-position: center;
         }
     }
 

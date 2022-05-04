@@ -1,0 +1,43 @@
+<section class="section-adding-products">
+    <div class="container adding-products-container">
+        <section class="section-adding-products__left">
+            <h3 class="section-adding-products__title">Добавление товара</h3>
+            <form name="newProductForm" action="" class="form-adding-products">
+                <div class="form-adding-products__item">
+                    <label for="nameProduct" class="form-adding-products__label">Наименование товара</label>
+                    <input placeholder="Введите наименование товара" type="text" name="nameProduct" id="nameProduct"
+                        class="form-adding-products__input necessarily">
+                    <span class="error-message nameProduct">Поле является обязательным</span>
+                </div>
+                <div class="form-adding-products__item">
+                    <label for="product-description" class="form-adding-products__label product-description">Описание
+                        товара</label>
+                    <input placeholder="Введите описание товара" type="text" name="productDescription"
+                        id="product-description" class="form-adding-products__input product-description">
+                </div>
+                <div class="form-adding-products__item">
+                    <label for="linkProduct" class="form-adding-products__label">Ссылка на изображение товара</label>
+                    <input placeholder="Введите ссылку" type="text" name="linkProduct" id="linkProduct"
+                        class="form-adding-products__input necessarily">
+                    <span class="error-message linkProduct">Поле является обязательным</span>
+                </div>
+                <div class="form-adding-products__item">
+                    <label for="priceProduct" class="form-adding-products__label">Цена товара</label>
+                    <input placeholder="Введите цену" type="number" name="priceProduct" id="priceProduct"
+                        class="form-adding-products__input necessarily">
+                    <span class="error-message priceProduct">Поле является обязательным</span>
+                </div>
+
+                <button class="form-adding-products__add-product">Добавить товар</button>
+            </form>
+        </section>
+
+        <section class="section-adding-products__right">
+            <div class="product-withdrawal-default">По умолчанию</div>
+            <ul class="about-products-list">
+                
+            </ul>
+        </section>
+
+    </div>
+</section>
