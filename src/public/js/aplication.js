@@ -48,7 +48,7 @@ function createDataProductsListHTML(dataProduct) {
                 <div class="about-product-text">
                     ${el.description}
                 </div>
-                <div class="about-product-price">${el.price} руб.</div>
+                <div class="about-product-price">${el.price.toLocaleString()} руб.</div>
             </div>
         </li>
         `
@@ -132,13 +132,12 @@ $newProductForm?.addEventListener('submit', (event) => {
         document.querySelector('.form-adding-products__add-product').classList.remove('active')
         $nameProduct.classList.remove('error')
         $newProductForm.reset();
-        console.log(formData)
         const post = {
             id: Date.now(),
             imgSrc: formData.linkProduct,
             name: formData.nameProduct,
             description: formData.productDescription,
-            price: formData.priceProduct,
+            price: Number(formData.priceProduct.toLocaleString()),
         }
         $aboutProductList.innerHTML = '';
         productsList.push(post)
