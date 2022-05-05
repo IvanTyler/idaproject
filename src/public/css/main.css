@@ -194,6 +194,11 @@ body {
 .section-adding-products .form-adding-products__input.product-description {
   padding-top: 11px;
   height: 108px;
+  position: relative;
+}
+.section-adding-products .form-adding-products__input.product-description::placeholder {
+  position: absolute;
+  top: 12px;
 }
 .section-adding-products .form-adding-products__add-product {
   display: flex;
@@ -231,13 +236,13 @@ body {
     margin-top: 30px;
   }
 }
-.section-adding-products__right .product-withdrawal-default {
+.section-adding-products__right .wrapper-product-withdrawal {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: auto;
-  font-family: 'SourceSansPro-regular';
-  width: 121.49px;
+  width: 135px;
   height: 36px;
   background-color: #fffefb;
   font-size: 12px;
@@ -246,7 +251,7 @@ body {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
-.section-adding-products__right .product-withdrawal-default::after {
+.section-adding-products__right .wrapper-product-withdrawal::after {
   content: '';
   display: inline-block;
   margin-left: 5px;
@@ -257,6 +262,41 @@ body {
   transform: rotate(45deg);
   border-left: transparent;
   border-top: transparent;
+}
+.section-adding-products__right .sort-product {
+  cursor: pointer;
+}
+.section-adding-products__right .product-withdrawal {
+  position: absolute;
+  z-index: 3;
+  transform: translateY(70%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'SourceSansPro-regular';
+  background-color: #fffefb;
+  font-size: 12px;
+  line-height: 15px;
+  color: #B4B4B4;
+  border-radius: 4px;
+}
+.section-adding-products__right .product-withdrawal__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 100%;
+  border-bottom: 1px #b4b4b4;
+  transition: 0.2s;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.section-adding-products__right .product-withdrawal__item:hover {
+  background-color: #fffaec;
+}
+.section-adding-products__right .product-withdrawal.show {
+  display: none;
 }
 .section-adding-products__right .about-products-list {
   display: flex;

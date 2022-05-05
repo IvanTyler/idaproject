@@ -1,10 +1,24 @@
-console.log('js work')
-
 const $newProductForm = document.forms.newProductForm;
+
 const $nameProduct = document.querySelector('#nameProduct')
 const $linkProduct = document.querySelector('#linkProduct')
 const $priceProduct = document.querySelector('#priceProduct')
 const $aboutProductList = document.querySelector('.about-products-list')
+const $aboutProductListItem = document.querySelectorAll('.about-products-list__item')
+
+const $sortMaxPrice = document.querySelector('.sortMaxPrice')
+const $sortMinPrice = document.querySelector('.sortMinPrice')
+const $sortNames = document.querySelector('.sortNames')
+const $sortProduct = document.querySelector('.sort-product')
+const $productWithdrawal = document.querySelector('.product-withdrawal')
+
+$sortProduct?.addEventListener('click', () => {
+    if ($productWithdrawal.classList.contains('show')) {
+        $productWithdrawal.classList.remove('show')
+    } else {
+        $productWithdrawal.classList.add('show')
+    }
+})
 
 function getDataProducts() {
     let max = 999999999;
@@ -12,13 +26,14 @@ function getDataProducts() {
     return Array.from(Array(10)).map((el, i) => {
         return {
             id: Math.floor(Math.random() * (max - min) + min),
-            imgSrc: 'https://www.imgonline.com.ua/examples/bee-on-daisy.jpg',
+            imgSrc: '../img/img-product.png',
             name: `Наименование товара ${i + 1}`,
             description: `Довольно-таки интересное описание товара в несколько строк. ${i + 1}`,
-            price: `${(i + 1) * 10000}`,
+            price: (i + 1) * 10000,
         }
     })
 }
+let productsList = getDataProducts()
 
 function createDataProductsListHTML(dataProduct) {
     return dataProduct.map(el => {
@@ -40,34 +55,49 @@ function createDataProductsListHTML(dataProduct) {
     }).join('');
 }
 
-function addDataPostProductHTML(dataProduct) {
-    return `
-    <li class="about-products-list__item" data-id="${dataProduct.id}">
-        <button data-delete class="delete-product"></button>
-        <div class="wrapper-product-img">
-            <img src="${dataProduct.imgSrc}" alt="${dataProduct.name}" class="wrapper-product-img__img">
-        </div>
-        <div class="about-products-list__description">
-            <h3 class="about-product-title">${dataProduct.name}</h3>
-            <div class="about-product-text">
-                ${dataProduct.description}
-            </div>
-            <div class="about-product-price">${dataProduct.price} руб.</div>
-        </div>
-    </li>
-    `
-}
-
 function addDataProductHTML() {
-    const productList = getDataProducts()
-    const DataProductListHTML = createDataProductsListHTML(productList);
-    if (productList.length) $aboutProductList.classList.add('preloader')
+    const DataProductListHTML = createDataProductsListHTML(productsList);
+    if (productsList.length) $aboutProductList.classList.add('preloader')
     setTimeout(() => {
         $aboutProductList.classList.remove('preloader')
         $aboutProductList.insertAdjacentHTML('afterbegin', DataProductListHTML)
-    }, 3000)
+    }, 1500)
 }
 addDataProductHTML()
+
+
+function sortPostsProduct(flagSortPostsProduct) {
+    if ($aboutProductListItem) {
+        $aboutProductList.innerHTML = '';
+
+        flagSortPostsProduct ?
+            productsList.sort((a, b) => b.price - a.price) :
+            productsList.sort((a, b) => a.price - b.price);
+
+        const DataProductListHTML = createDataProductsListHTML(productsList);
+        $aboutProductList.insertAdjacentHTML('afterbegin', DataProductListHTML)
+    }
+}
+
+const flagSortPostsProduct = true;
+$sortMaxPrice?.addEventListener('click', () => {
+    sortPostsProduct(flagSortPostsProduct)
+})
+
+$sortMinPrice?.addEventListener('click', () => {
+    sortPostsProduct(!flagSortPostsProduct)
+})
+
+$sortNames.addEventListener('click', () => {
+    $aboutProductList.innerHTML = '';
+    productsList.sort((prev, next) => {
+        if (prev.name < next.name) return -1;
+        if (prev.name < next.name) return 1;
+    });
+    const DataProductListHTML = createDataProductsListHTML(productsList);
+    $aboutProductList.insertAdjacentHTML('afterbegin', DataProductListHTML)
+})
+
 
 $newProductForm?.addEventListener('input', (event) => {
     if (event.target.classList.contains('necessarily')) {
@@ -110,8 +140,10 @@ $newProductForm?.addEventListener('submit', (event) => {
             description: formData.productDescription,
             price: formData.priceProduct,
         }
-        const dataPostProductHTML = addDataPostProductHTML(post)
-        $aboutProductList.insertAdjacentHTML('afterbegin', dataPostProductHTML)
+        $aboutProductList.innerHTML = '';
+        productsList.push(post)
+        const DataProductListHTML = createDataProductsListHTML(productsList);
+        $aboutProductList.insertAdjacentHTML('afterbegin', DataProductListHTML)
     }
 })
 
@@ -138,9 +170,12 @@ $aboutProductList?.addEventListener('click', (event) => {
     if (event.target.hasAttribute('data-delete')) {
         const $currentPost = event.target.closest('[data-id]')
         const postId = $currentPost.dataset.id
-        
+        const numberID = Number(postId)
+
         if (postId) {
+            productsList = productsList.filter(el => el.id !== numberID)
             $currentPost.remove()
+            if (productsList.length === 0) $aboutProductList.insertAdjacentHTML('afterbegin', '<span>Товара нет</span>')
         }
     }
 })

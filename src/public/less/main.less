@@ -173,6 +173,11 @@ html, body {
         &__input.product-description {
             padding-top: 11px;
             height: 108px;
+            position: relative;
+            &::placeholder {
+                position: absolute;
+                top: 12px;
+            }
         }
         &__add-product {
             display: flex;
@@ -209,13 +214,13 @@ html, body {
             margin-left: 0;
             margin-top: 30px;
         }
-        .product-withdrawal-default {
+        .wrapper-product-withdrawal {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-left: auto;
-            font-family: @var-mainFont;
-            width: 121.49px;
+            width: 135px;
             height: 36px;
             background-color: @var-mainBackgroundColor;
             font-size: 12px;
@@ -234,6 +239,41 @@ html, body {
                 border-left: transparent;
                 border-top: transparent;
             }
+        }
+        .sort-product {
+            cursor: pointer;
+        }
+        .product-withdrawal {
+            position: absolute;
+            z-index: 3;
+            transform: translateY(70%);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            font-family: @var-mainFont;
+            background-color: @var-mainBackgroundColor;
+            font-size: 12px;
+            line-height: 15px;
+            color: #B4B4B4;
+            border-radius: 4px;
+            &__item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 25px;
+                width: 100%;
+                border-bottom: 1px #b4b4b4;
+                transition: @var-transition;
+                border-radius: 4px;
+                cursor: pointer;
+                &:hover {
+                    background-color: darken(@var-mainBackgroundColor, 3%);
+                }
+            }
+        }
+        .product-withdrawal.show {
+            display: none;
         }
         .about-products-list {
             display: flex;
