@@ -74,8 +74,12 @@ function sortPostsProduct(flagSortPostsProduct) {
             productsList.sort((a, b) => b.price - a.price) :
             productsList.sort((a, b) => a.price - b.price);
 
-        const DataProductListHTML = createDataProductsListHTML(productsList);
-        $aboutProductList.insertAdjacentHTML('afterbegin', DataProductListHTML)
+        if (productsList.length) {
+            const DataProductListHTML = createDataProductsListHTML(productsList);
+            $aboutProductList.insertAdjacentHTML('afterbegin', DataProductListHTML)
+        } else {
+            $aboutProductList.insertAdjacentHTML('afterbegin', '<span>Товара нет</span>')
+        }
     }
 }
 
@@ -94,8 +98,12 @@ $sortNames.addEventListener('click', () => {
         if (prev.name < next.name) return -1;
         if (prev.name < next.name) return 1;
     });
-    const DataProductListHTML = createDataProductsListHTML(productsList);
-    $aboutProductList.insertAdjacentHTML('afterbegin', DataProductListHTML)
+    if (productsList.length) {
+        const DataProductListHTML = createDataProductsListHTML(productsList);
+        $aboutProductList.insertAdjacentHTML('afterbegin', DataProductListHTML)
+    } else {
+        $aboutProductList.insertAdjacentHTML('afterbegin', '<span>Товара нет</span>')
+    }
 })
 
 
