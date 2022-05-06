@@ -182,7 +182,7 @@ body {
   margin: 0;
 }
 .section-adding-products .form-adding-products__input.error {
-  border: 1px solid #ff8484;
+  outline: 1px solid #ff8484;
 }
 @media (max-width: 810px) {
   .section-adding-products .form-adding-products__input.error::placeholder {
