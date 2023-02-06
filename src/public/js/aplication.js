@@ -97,6 +97,7 @@ $sortNames.addEventListener('click', () => {
     productsList.sort((prev, next) => {
         if (prev.name < next.name) return -1;
         if (prev.name < next.name) return 1;
+        return 0
     });
     if (productsList.length) {
         const DataProductListHTML = createDataProductsListHTML(productsList);
