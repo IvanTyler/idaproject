@@ -134,7 +134,8 @@
         }
 
         .container-furnishing-offer {
-            max-width: 882px;
+            max-width: 834px;
+            padding: 0 16px;
 
             .section-furnishing-content {
                 margin-top: 24px;
@@ -146,6 +147,8 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
+                    @media (max-width: 590px) {}
                 }
 
                 .section-furnishing-list-titles,
@@ -187,12 +190,19 @@
                         &:nth-child(2) {
                             justify-content: flex-start;
                             padding-left: 16px;
+                            padding-right: 16px;
                         }
 
                         &:last-child {
                             min-width: 114px;
                             border-radius: 0 10px 0 0;
                         }
+                    }
+                }
+
+                .section-furnishing-list-titles {
+                    @media (max-width: 590px) {
+                        display: none;
                     }
                 }
 
@@ -235,6 +245,7 @@
 
                 .section-furnishing-list-cards-content {
                     display: flex;
+                    position: relative;
 
                     &__item {
                         display: flex;
@@ -251,6 +262,18 @@
                             font-size: 12px;
                             line-height: 15px;
                             color: #8883AB;
+
+                            @media (max-width: 590px) {
+                                min-width: initial;
+                                position: absolute;
+                                z-index: 1;
+                                background: #F6F6F9;
+                                border-radius: 10px;
+                                width: 28px;
+                                height: 28px;
+                                top: 12px;
+                                left: 24px;
+                            }
                         }
 
                         &:nth-child(2) {
@@ -267,10 +290,18 @@
                             min-width: 50px;
                         }
 
+                        &:nth-child(3),
+                        &:last-child {
+                            @media (max-width: 590px) {
+                                display: none;
+                            }
+                        }
+
                         &:last-child,
                         &:nth-child(2) {
                             justify-content: flex-start;
                             padding-left: 16px;
+                            padding-right: 16px;
                         }
 
                         &:last-child {
@@ -287,6 +318,11 @@
                         @media (max-width: 1440px) {
                             width: 136px;
                             height: 136px;
+                        }
+
+                        @media (max-width: 590px) {
+                            width: 199px;
+                            height: 199px;
                         }
                     }
 
@@ -306,6 +342,42 @@
                         font-size: 14px;
                         line-height: 14px;
                         color: #3B3B3B;
+                    }
+
+                    &__name {
+                        @media (max-width: 590px) {
+                            font-family: 'GraphikLCG-Medium';
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 21px;
+                            color: #3B3B3B;
+                        }
+                    }
+
+                    &__quantity-mobile {
+                        display: none;
+                        font-family: 'GraphikLCG-Medium';
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #222;
+
+                        @media (max-width:590px) {
+                            display: inline;
+                        }
+                    }
+
+                    &__total-price-mobile {
+                        display: none;
+                        font-family: 'GraphikLCG-Medium';
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #3B3B3B;
+
+                        @media (max-width:590px) {
+                            display: inline;
+                        }
                     }
 
                     &__code,
