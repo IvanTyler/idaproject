@@ -1,13 +1,296 @@
+@import url('../css/main-fonts.css');
 * {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+.btn {
+  width: 85px;
+  height: 24px;
+  font-family: 'GraphikLCG-Medium';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  background-color: #ED5365;
+  border-radius: 8px;
+  border: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #eb3c50;
 }
 .container {
   max-width: 1920px;
   margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+@media (max-width: 460px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.header-furnishing {
+  background-color: #1B2024;
+}
+.header-furnishing__logo-link {
+  display: flex;
+}
+@media (max-width: 460px) {
+  .header-furnishing__logo-link {
+    margin-top: 6px;
+  }
+}
+@media (max-width: 460px) {
+  .header-furnishing__logo-icon {
+    display: none;
+  }
+}
+.header-furnishing__logo-icon-mobile {
+  display: none;
+}
+@media (max-width: 460px) {
+  .header-furnishing__logo-icon-mobile {
+    display: inline-block;
+  }
+}
+@media (max-width: 375px) {
+  .header-furnishing__logo-icon-mobile {
+    width: 140px;
+  }
+}
+.header-furnishing .container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+@media (max-width: 460px) {
+  .header-furnishing .container-header {
+    align-items: flex-start;
+  }
+}
+.header-furnishing .header-list-contacts {
+  display: flex;
+}
+@media (max-width: 460px) {
+  .header-furnishing .header-list-contacts {
+    flex-direction: column;
+  }
+}
+.header-furnishing .header-list-contacts__item:not(:last-child) {
+  margin-right: 32px;
+}
+@media (max-width: 460px) {
+  .header-furnishing .header-list-contacts__item:not(:last-child) {
+    text-align: right;
+    margin-right: 0;
+  }
+}
+@media (max-width: 460px) {
+  .header-furnishing .header-list-contacts__item:last-child {
+    margin-top: 32px;
+  }
+}
+@media (max-width: 375px) {
+  .header-furnishing .header-list-contacts__item:last-child {
+    margin-top: 24px;
+  }
+}
+.header-furnishing .header-list-contacts__link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+  font-family: 'GraphikLCG-Light';
+}
+.main {
+  margin-top: 34px;
+}
+.main .section-furnishing-offer__title {
+  font-family: 'Arial';
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 31px;
+  color: #000;
+}
+.main .section-furnishing-offer .container-furnishing-offer {
+  max-width: 882px;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content {
+  margin-top: 24px;
+  border: 1px solid #E0DCF9;
+  border-radius: 10px;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content__button {
+  margin: 9px auto 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles,
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom {
+  display: flex;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles__item,
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F6F6F9;
+  height: 22px;
+  font-family: 'GraphikLCG-Medium';
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 13px;
+  text-align: center;
+  color: #000;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles__item:not(:last-child),
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:not(:last-child) {
+  border-right: 1px solid #E0DCF9;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles__item:first-child,
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:first-child {
+  min-width: 54px;
+  border-radius: 10px 0 0 0;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles__item:nth-child(2),
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:nth-child(2) {
+  flex-grow: 1;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles__item:nth-child(3),
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:nth-child(3) {
+  padding: 0 4px 0;
+  min-width: 50px;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles__item:last-child,
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:last-child,
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles__item:nth-child(2),
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:nth-child(2) {
+  justify-content: flex-start;
   padding-left: 16px;
-  padding-right: 16px;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles__item:last-child,
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:last-child {
+  min-width: 114px;
+  border-radius: 0 10px 0 0;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:first-child {
+  border-radius: 0px 0 0 10px;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 24px;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:last-child {
+  border-radius: 0 0 10px 0;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__count-products {
+  font-family: 'GraphikLCG-Light';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #8883AB;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards__item {
+  padding: 12px 0 12px;
+  border-top: 1px solid #E0DCF9;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards__item:last-child {
+  border-bottom: 1px solid #E0DCF9;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content {
+  display: flex;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'GraphikLCG-Medium';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #3B3B3B;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:first-child {
+  min-width: 54px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #8883AB;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:nth-child(2) {
+  flex-grow: 1;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:nth-child(2),
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:nth-child(3) {
+  border-right: 1px solid #E0DCF9;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:nth-child(3) {
+  padding: 0 4px 0;
+  min-width: 50px;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:last-child,
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:nth-child(2) {
+  justify-content: flex-start;
+  padding-left: 16px;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:last-child {
+  min-width: 114px;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__wrapper-img {
+  width: 176px;
+  height: 176px;
+  display: inline-flex;
+  margin-right: 16px;
+}
+@media (max-width: 1440px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__wrapper-img {
+    width: 136px;
+    height: 136px;
+  }
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__img {
+  object-fit: cover;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__wrapper-txt {
+  display: flex;
+  flex-direction: column;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__name,
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__current-price {
+  font-family: 'GraphikLCG-Medium';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: #3B3B3B;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__code,
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__past-price {
+  font-family: 'GraphikLCG-Light';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #777;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__code,
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__price {
+  display: inline-flex;
+  margin-top: 4px;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__money,
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__aed {
+  text-decoration: line-through;
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__past-price {
+  margin-left: 10px;
 }
