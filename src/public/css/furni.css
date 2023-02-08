@@ -33,8 +33,8 @@
 }
 @media (max-width: 460px) {
   .container {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
 }
 .header-furnishing {
@@ -115,6 +115,11 @@
 .main {
   margin-top: 34px;
 }
+@media (max-width: 590px) {
+  .main {
+    margin-top: 0;
+  }
+}
 .main .section-furnishing-offer__title {
   font-family: 'Arial';
   font-weight: 700;
@@ -122,20 +127,46 @@
   line-height: 31px;
   color: #000;
 }
+@media (max-width: 590px) {
+  .main .section-furnishing-offer__title {
+    display: none;
+  }
+}
 .main .section-furnishing-offer .container-furnishing-offer {
   max-width: 834px;
   padding: 0 16px;
+}
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer {
+    padding: 0;
+  }
 }
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content {
   margin-top: 24px;
   border: 1px solid #E0DCF9;
   border-radius: 10px;
 }
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content {
+    margin-top: 0;
+    padding-bottom: 52px;
+    border: none;
+  }
+}
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content__button {
   margin: 9px auto 9px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content__button {
+    font-size: 14px;
+    line-height: 17px;
+    width: 100px;
+    height: 32px;
+    margin: 12px 0 8px 16px;
+  }
 }
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles,
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom {
@@ -191,27 +222,112 @@
     display: none;
   }
 }
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item {
+    font-size: 16px;
+    line-height: 19px;
+    height: 52px;
+  }
+}
+@media (max-width: 350px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:not(:last-child) {
+    border-right: none;
+  }
+}
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:first-child {
-  border-radius: 0px 0 0 10px;
+  border-radius: 0 0 0 10px;
+}
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:first-child {
+    border-radius: 0;
+    display: none;
+  }
 }
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:nth-child(2) {
   display: flex;
   justify-content: space-between;
   padding-right: 24px;
 }
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:nth-child(2) {
+    width: 50%;
+    justify-content: flex-start;
+    padding-left: 14px;
+    padding-right: 40px;
+  }
+}
+@media (max-width: 425px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:nth-child(2) {
+    padding-right: 0;
+  }
+}
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:nth-child(3) {
+    display: none;
+  }
+}
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:last-child {
   border-radius: 0 0 10px 0;
 }
-.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__count-products {
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:last-child {
+    width: 50%;
+    border-radius: 0;
+    padding-left: 29px;
+  }
+}
+@media (max-width: 350px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__item:last-child {
+    padding-left: 12px;
+  }
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__products span {
   font-family: 'GraphikLCG-Light';
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: #8883AB;
 }
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__products {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__products {
+    margin-left: 32px;
+  }
+}
+@media (max-width: 350px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-titles-bottom__products {
+    margin-left: 24px;
+  }
+}
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards__item {
   padding: 12px 0 12px;
   border-top: 1px solid #E0DCF9;
+}
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards__item {
+    border-top: none;
+  }
 }
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards__item:last-child {
   border-bottom: 1px solid #E0DCF9;
@@ -238,15 +354,7 @@
 }
 @media (max-width: 590px) {
   .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:first-child {
-    min-width: initial;
-    position: absolute;
-    z-index: 1;
-    background: #F6F6F9;
-    border-radius: 10px;
-    width: 28px;
-    height: 28px;
-    top: 12px;
-    left: 24px;
+    display: none;
   }
 }
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:nth-child(2) {
@@ -255,6 +363,12 @@
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:nth-child(2),
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:nth-child(3) {
   border-right: 1px solid #E0DCF9;
+}
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:nth-child(2),
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:nth-child(3) {
+    border-right: none;
+  }
 }
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:nth-child(3) {
   padding: 0 4px 0;
@@ -272,29 +386,72 @@
   padding-left: 16px;
   padding-right: 16px;
 }
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:nth-child(2) {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__item:last-child {
   min-width: 114px;
 }
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__wrapper-img {
-  width: 176px;
+  min-width: 176px;
   height: 176px;
   display: inline-flex;
   margin-right: 16px;
+  position: relative;
 }
 @media (max-width: 1440px) {
   .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__wrapper-img {
-    width: 136px;
+    min-width: 136px;
     height: 136px;
   }
 }
 @media (max-width: 590px) {
   .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__wrapper-img {
-    width: 199px;
+    min-width: 199px;
     height: 199px;
+    margin-right: 12px;
+  }
+}
+@media (max-width: 400px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__wrapper-img {
+    align-self: self-start;
+    min-width: 168px;
+    height: 168px;
+  }
+}
+@media (max-width: 350px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__wrapper-img {
+    min-width: 132px;
+    height: 132px;
+  }
+}
+.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__number-card-mobile {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-width: initial;
+  position: absolute;
+  z-index: 1;
+  background: #F6F6F9;
+  border-radius: 10px;
+  width: 28px;
+  height: 28px;
+  top: 12px;
+  left: 12px;
+}
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__number-card-mobile {
+    display: flex;
   }
 }
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__img {
   object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
 }
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__wrapper-txt {
   display: flex;
@@ -305,16 +462,25 @@
   font-family: 'GraphikLCG-Medium';
   font-weight: 500;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 17px;
   color: #3B3B3B;
 }
 @media (max-width: 590px) {
   .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__name {
-    font-family: 'GraphikLCG-Medium';
-    font-weight: 500;
     font-size: 18px;
     line-height: 21px;
-    color: #3B3B3B;
+  }
+}
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__name {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+@media (max-width: 350px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__name {
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__quantity-mobile {
@@ -340,7 +506,14 @@
 }
 @media (max-width: 590px) {
   .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__total-price-mobile {
+    margin-top: 8px;
     display: inline;
+  }
+}
+@media (max-width: 350px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__total-price-mobile {
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__code,
@@ -348,18 +521,32 @@
   font-family: 'GraphikLCG-Light';
   font-weight: 400;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 15px;
   color: #777;
+}
+@media (max-width: 590px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__code {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__code,
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__price {
   display: inline-flex;
   margin-top: 4px;
 }
+@media (max-width: 425px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__price {
+    flex-direction: column;
+  }
+}
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__money,
 .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__aed {
   text-decoration: line-through;
 }
-.main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__past-price {
-  margin-left: 10px;
+@media (max-width: 425px) {
+  .main .section-furnishing-offer .container-furnishing-offer .section-furnishing-content .section-furnishing-list-cards-content__past-price {
+    margin-left: 0;
+    margin-top: 3px;
+  }
 }
